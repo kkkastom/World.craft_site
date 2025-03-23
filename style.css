@@ -1,0 +1,24 @@
+.container {
+    width: 1140px;
+    margin: 0 auto;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+a {
+    margin-left: 44px;
+    text-decoration: none;
+    color: black;
+}
+
+#cover {
+    height: 763px;
+    display: flex;
+    align-items: center;
+    background-image: url(/pics/cover.png);
+    color: white;
+}
