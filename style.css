@@ -1,34 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap');
+
 body {
     font-family: "Jost", sans-serif;
     margin: 0 auto;
-    background-image: url(pics/cover.png);
     width: 100vh;
     background-size: cover;
 }
 
 .container {
-    justify-content: flex-start;
-    align-content: center;
+    width: 1140px;
+    margin: 0 auto;
 }
 
 header {
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
 }
 
 a {
-    margin-left: 44px;
+    margin-left: 30px;
     text-decoration: none;
     color: black;
 }
 
 #cover {
+    height: 763px;
     display: flex;
     align-items: center;
-    color: white;
+    background-image: url(pics/cover.png);
 }
 
-.container nav {
-    font-size: 24px;
+.about-us-content {
+    display: flex;
 }
+
+.card {
+    width: 365px;
+}
+
+.card_headline {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
