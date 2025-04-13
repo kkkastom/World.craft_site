@@ -29,6 +29,7 @@ a {
     display: flex;
     align-items: center;
     background-image: url(pics/cover.png);
+    background-size: 100vh;
 }
 
 .about-us-content {
@@ -45,3 +46,23 @@ a {
     justify-content: space-between;
 }
 
+.cards {
+    display: flex;
+    justify-content: space-between;
+}
+ #form {
+    height: 626px;
+    background-image: url(/pics/cityVector.svg);
+    background-color: #172142;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+ }
+
+ form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+ }
