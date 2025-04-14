@@ -71,7 +71,7 @@ a {
     padding: 0;
     width: auto;  
     height: 626px;
-    background-image: url(/pics/feedback_form.svg);
+    background-image: url(/pics/feedback_form.png);
     background-position: left;
     display: flex;
     align-items: center;
@@ -85,4 +85,36 @@ form {
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+#form2 {
+    margin: 0;
+    padding: 0;
+    width: auto;  
+    height: 626px;
+    background-image: url(/pics/contacts.png);
+    background-position: left;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+button {
+    height: 57px;  
+    width: 364px;
+}
+
+footer{
+    height: 390px;
+    
+}
+
+.contacts {
+    display: flex;
+    flex-direction: column;
+}
+
+#forma {
+
 }
