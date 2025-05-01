@@ -20,12 +20,12 @@
             <header class="container">
                 <img src="pics/logo.svg" alt="logo">
                 <nav>
-                    <a href="">Главная</a>
-                    <a href="">О нас</a>
-                    <a href="">Тарифы</a>
-                    <a href="">Обратная связь</a>
-                    <a href="">Блог</a>
-                    <a href="">Контакты</a>
+                    <a href="#cover">Главная</a>
+                    <a href="#about-us">О нас</a>
+                    <a href="#catalog">Тарифы</a>
+                    <a href="#form">Обратная связь</a>
+                    <a href="#blog">Блог</a>
+                    <a href="#footer">Контакты</a>
                 </nav>
             </header>
             <div class="container cover-content">
@@ -78,8 +78,8 @@
                                 на геймплей. Практика — <br>
                                 создание небольшой сцены.</p>
                         </div>
-                        <button class="btn-info">Мне подходит!</button>
                     </div>
+                    <button class="btn-info-catalog">Мне подходит!</button>
                 </div>
                 <div class="card">
                     <img src="pics/card2.png" alt="">
@@ -94,8 +94,8 @@
                                 Dishonored). Создание районов,<br>
                                 работа с вертикальностью.</p>
                         </div>
-                        <button class="btn-info">Мне подходит!</button>
                     </div>
+                    <button class="btn-info-catalog">Мне подходит!</button>
                 </div>
                 <div class="card">
                     <img src="pics/card3.png" alt="">
@@ -110,8 +110,8 @@
                                 и др.), реализация финального проекта<br>
                                 игрового города.</p>
                         </div>
-                        <button class="btn-info">Мне подходит!</button>
                     </div>
+                    <button class="btn-info-catalog">Мне подходит!</button>
                 </div>
             </div>
         </section>
@@ -120,13 +120,13 @@
                 Запишись на курс!<br>
                 Сделай первый шаг в геймдизайне!</h2>
             <form action="" id="forma">
-            <form action="">
-                <label for="name">Ваше имя</label>
-                <input type="text" placeholder="Иванов Иван" name="" id="">
-                <label for="name">Электронная почта</label>
-                <input type="mail" placeholder="Example@mail.ru" name="" id="">
-                <input type="submit" value="Записаться!">
-            </form>
+                <form action="">
+                    <label for="name">Ваше имя</label>
+                    <input type="text" placeholder="Иванов Иван" name="" id="">
+                    <label for="name">Электронная почта</label>
+                    <input type="mail" placeholder="Example@mail.ru" name="" id="">
+                    <input type="submit" value="Записаться!">
+                </form>
         </section>
         <section class="container" id="blog">
             <div class="block-description">
@@ -134,31 +134,29 @@
                 <p class="main_text">Следите за трендами в игровой урбанистике! Узнайте, как создаются<br>культовые
                     игровые города, и вдохновляйтесь свежими идеями.</p>
             </div>
-            <div class="cards">
-                <div class="card news">
-                    <img src="pics/blog1.png" alt="">
-                    <div class="card_description">
+            <div class="blog-grid">
+                <div class="blog-card">
+                    <img src="pics/blog1.png" alt="Самые культовые города из комиксов">
+                    <div class="blog-card-content">
                         <h5>Самые культовые города из комиксов</h5>
                     </div>
                 </div>
-                <div class="card news">
-                    <img src="pics/blog2.png" alt="">
-                    <div class="card_description">
+                <div class="blog-card">
+                    <img src="pics/blog2.png" alt="Реальные места и их версии в играх">
+                    <div class="blog-card-content">
                         <h5>Реальные места и их версии в играх</h5>
                     </div>
                 </div>
-            </div>
-            <div class="cards">
-                <div class="card news">
-                    <img src="pics/blog3.png" alt="">
-                    <div class="card_description">
+                <div class="blog-card">
+                    <img src="pics/blog3.png" alt="Почему мертвые места притягивают нас?">
+                    <div class="blog-card-content">
                         <h5>Почему мертвые места притягивают нас?</h5>
                     </div>
                 </div>
-                <div class="card news">
-                    <img src="pics/blog4.png" alt="">
-                    <div class="card_description">
-                        <h5>Как увлечь игрока в “Симуляторе курьера”?<br>Эксклюзивное интервью с Хидео Кодзимой</h5>
+                <div class="blog-card">
+                    <img src="pics/blog4.png" alt="Интервью с Хидео Кодзимой">
+                    <div class="blog-card-content">
+                        <h5>Как увлечь игрока в "Симуляторе курьера"?<br>Эксклюзивное интервью с Хидео Кодзимой</h5>
                     </div>
                 </div>
             </div>
@@ -198,6 +196,34 @@
             </div>
         </section>
     </main>
+    <button id="back-to-top" class="back-to-top">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 20V4M5 11L12 4L19 11" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" />
+        </svg>
+    </button>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const backToTopButton = document.getElementById('back-to-top');
+
+            window.addEventListener('scroll', function () {
+                if (window.pageYOffset > 300) {
+                    backToTopButton.classList.add('show');
+                    backToTopButton.style.display = 'flex';
+                } else {
+                    backToTopButton.classList.remove('show');
+                }
+            });
+
+            backToTopButton.addEventListener('click', function (e) {
+                e.preventDefault();
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
 </body>
 
 </html>
